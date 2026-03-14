@@ -1,0 +1,499 @@
+/* Copied and adapted from original style.css. Place your images into the public/ folder: public/img.png, public/Diploma.jpg, public/Rabina.png */
+
+/* ===== MODERN COLOR SCHEME ===== */
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #1a202c;
+    --primary-color-light: #6366f1;
+    --secondary-color: #8b5cf6;
+    --card-bg-light: #f8fafc;
+    --footer-bg-light: #1e293b;
+    --footer-text-light: #f1f5f9;
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+:root.dark-mode {
+    --bg-color-light: #0f172a;
+    --text-color-light: #e2e8f0;
+    --primary-color-light: #818cf8;
+    --secondary-color: #a78bfa;
+    --card-bg-light: #1e293b;
+    --footer-bg-light: #020617;
+    --footer-text-light: #e2e8f0;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+    line-height: 1.7;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* ===== SMOOTH SCROLLING ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--card-bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color-light);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, a.logo {
+    color: var(--primary-color-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color-light);
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background: var(--bg-color-light);
+    color: var(--text-color-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-weight: bold;
+    color: var(--text-color-light);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color-light);
+}
+
+.hero-section {
+    padding: 100px 0;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    color: var(--text-color-light);
+}
+
+.hero-content h1 span {
+    color: var(--primary-color-light);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color-light);
+}
+.hero-image img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50% / 35%;
+  border: 3px solid var(--primary-color-light);
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color-light);
+}
+
+.education-section, .skills-section, .projects-section, .contact-section, .about-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-section {
+    background: var(--card-bg-light);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color-light);
+}
+
+.card {
+    background: var(--card-bg-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.education-grid, .skills-cards, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid white;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  background: var(--card-bg-light);
+  color: var(--text-color-light);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid var(--primary-color-light);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  background:  var(--primary-color-light);
+  color: var(--bg-color-light);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.02);
+}
+
+.footer {
+    background: var(--footer-bg-light);
+    color: var(--footer-text-light);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color-light);
+    transition: color 0.3s ease;
+    margin-left: 20px;
+}
+
+.resume-btn {
+    background-color: var(--primary-color-light);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Modal basic styles */
+.certificate-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 200;
+}
+
+.modal-content {
+  background: var(--bg-color-light);
+  color: var(--text-color-light);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.close {
+  cursor: pointer;
+  float: right;
+  font-size: 24px;
+}
+
+/* small helpers */
+.modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero-section .container { flex-direction: column-reverse; }
+}
+
+/* Improved Contact Section Styles */
+.contact-section {
+    padding: 60px 0;
+}
+.contact-section .lead {
+    text-align: center;
+    color: #6b6b6b;
+    margin-bottom: 24px;
+}
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* equal columns */
+    gap: 30px;
+    align-items: stretch; /* make children stretch to equal height */
+}
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contact-card {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    background: var(--card-bg-light);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.contact-icon {
+    font-size: 28px;
+    color: var(--primary-color-light);
+    min-width: 36px;
+}
+.contact-socials a {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: var(--text-color-light);
+}
+
+/* Social card (placed under contact cards) */
+.contact-social-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 10px;
+    background: var(--card-bg-light);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.contact-socials {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+}
+.contact-socials a {
+    color: var(--text-color-light);
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+.contact-socials a:hover {
+    background: rgba(0,0,0,0.04);
+    transform: translateY(-3px);
+    color: var(--primary-color-light);
+}
+
+.contact-right .contact-form {
+    background: var(--card-bg-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%; /* stretch to match left column */
+}
+.contact-form .form-row {
+    display: flex;
+    gap: 12px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #fff;
+    color: #222;
+    font-size: 14px;
+}
+.contact-form textarea,
+.contact-form .message-box {
+    min-height: 90px; /* reduced height */
+    resize: vertical;
+}
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto; /* push to bottom when form stretches */
+}
+
+/* Small link box next to submit button */
+.small-link-box {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding-left: 6px;
+}
+.small-link-box a {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.03);
+    color: var(--text-color-light);
+    transition: background 0.18s ease, transform 0.12s ease, color 0.18s ease;
+}
+.small-link-box a:hover {
+    background: rgba(0,0,0,0.06);
+    transform: translateY(-3px);
+    color: var(--primary-color-light);
+}
+.btn-primary {
+    background: var(--primary-color-light);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.form-success {
+    color: #0a8a3a;
+    font-weight: 600;
+}
+.form-error {
+    color: #c62828;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .contact-form .form-row {
+        flex-direction: column;
+    }
+}

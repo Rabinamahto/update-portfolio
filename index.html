@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabina Kumari Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Rabina Kumari</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <br><span>Rabina Kumari</span></h1>
+                <p>A passionate learner and aspiring Software Engineer.</p>
+                                            <a href="https://drive.google.com/file/d/1tkwuBO-Gzyd9EBlWWbm-hvX7dVSQODxV/view?usp=sharing" target="_blank" class="resume-btn">View Resume</a>
+
+                
+            </div>
+
+            <div class="hero-image">
+                <img src="img.png" alt="Rabina's photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Hello! 👋 I'm <b>Rabina Kumari</b>.
+                I am currently learning web development at <b>Navgurukul</b> and exploring technologies like <b>HTML, CSS, and JavaScript</b>.
+                I enjoy building projects that improve my coding skills, and I aim to become a <b>skilled Software Engineer</b>.</p>
+                <p>✨ I believe in teamwork, creativity, and continuous learning.
+                My interests include problem-solving, creating websites, and exploring new technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-grid">
+                    <div class="education-item card">
+        <h3>BCA (Bachelor of Computer Applications)</h3>
+        <p><strong>Institute:</strong> Your College Name</p>
+        <p><strong>Relevant Coursework:</strong> Web Development, JavaScript, Problem Solving</p>
+        <p><strong>Duration:</strong> 2025</p>
+        <p><em>Currently pursuing BCA to become a skilled Software Engineer.</em></p>
+    </div>
+
+    <!-- Navgurukul Card -->
+    <div class="education-item card">
+        <h3>Navgurukul Web Development Program</h3>
+        <p><strong>Learning:</strong> HTML, CSS, JavaScript, Git & GitHub</p>
+        <p><strong>Duration:</strong> 2024 - Present</p>
+        <p><em>Currently learning web development and building projects at Navgurukul.</em></p>
+    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-cards">
+                <!-- Technical Skills -->
+                <div class="card">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+                <!-- Soft Skills -->
+                <div class="card">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Leadership</li>
+                        <li>Problem-solving</li>
+                        <li>Discipline & Responsibility</li>
+                    </ul>
+                </div>
+                <!-- Tools / Software -->
+                <div class="card">
+                    <h3>Tools / Software Skills</h3>
+                    <ul>
+                        <li>Canva</li>
+                        <li>Figma</li>
+                        <li>Microsoft Word / PowerPoint</li>
+                        <li>Google Docs / Sheets / Slides</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="achievements" class="achievements-section">
+    <div class="container">
+        <h2>Achievements & Leadership</h2>
+
+        <div class="achievements-grid">
+
+            <!-- Leadership / DISCO Experience -->
+            <div class="experience-card card">
+                <h3>Discipline Coordinator (DISCO)</h3>
+                <p><strong>Organization:</strong> NavGurukul Foundation</p>
+                <p><strong>Duration:</strong> 3 Months</p>
+                <p>
+                    At NavGurukul, I maintained discipline among <strong>85+ students</strong>, resolved conflicts, promoted respectful behavior, 
+                    ensured timely attendance, and fostered a positive learning environment.  
+                    Awarded a <strong>Certificate of Appreciation</strong> for leadership.
+                </p>
+            </div>
+
+        
+<!-- Certificates Button (jo already hai use waise hi rehne do) -->
+<div class="certificate-card card">
+    <h3>Certificates</h3>
+    <p>Click the button below to view all my certificates:</p>
+    <button id="view-certificates" class="certificate-btn">View Certificates</button>
+</div>
+
+<!-- Modal for Certificates -->
+<div id="certificate-modal" class="certificate-modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h3>My Certificates</h3>
+        <div class="certificate-list">
+
+            <!-- Diploma Certificate -->
+            <div class="certificate-item">
+                <h4>Diploma Certificate - Alison</h4>
+                <p>Successfully completed a Diploma course from Alison.  
+                This diploma is CPD Certified, which meets international standards for professional development.</p>
+                <a href="#" onclick="openCert('img/Diploma.jpg','Diploma Certificate - Alison')">View Certificate</a>
+            </div>
+
+           <!-- EmpowerHER Certificate -->
+         <div class="certificate-item">
+             <h4>Certificate of Completion – EmpowerHER: Financial Literacy Program</h4>
+            <p>Rabina Kumari successfully completed the <b>EmpowerHER: Financial Literacy Program</b> in 
+            <b>February 2025</b>, organized by <b>CSRL (Centre for Social Responsibility and Leadership)</b> 
+             in collaboration with <b>Kriya Foundation</b>.  
+            <br><br>
+            This program focused on financial awareness, money management skills, and empowering 
+            young individuals with practical knowledge of financial literacy.
+           </p>
+           <a href="#" onclick="openCert('img/Rabina.png','Certificate of Completion – EmpowerHER: Financial Literacy Program')">
+           View Certificate
+          </a>
+</div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Viewing Single Certificate -->
+<div id="image-modal" class="certificate-modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <h3 id="cert-title"></h3>
+        <img id="cert-image" src="" alt="Certificate" style="max-width:100%; border-radius:10px;">
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Guessing Number Game</h3>
+                    <p>A fun game where the player has to guess a secret number.
+                    The program gives hints like "too high" or "too low" until the correct number is guessed.
+                    <b>Tech Used:</b> JavaScript</p>
+                    <a href="https://transcendent-babka-1a9957.netlify.app" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  
+  <div id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <div class="underline"></div>
+  <h3>Have You Any Questions ?</h3>
+  <p>I'M AT YOUR SERVICE</p>
+
+  <div class="contact-info">
+    <div class="info-box">
+      <i class="fas fa-phone"></i>
+      <h4>Call Us On</h4>
+      <p>+91 9430800618</p>
+    </div>
+
+    <div class="info-box">
+      <i class="fas fa-map-marker-alt"></i>
+      <h4>Location</h4>
+      <p>Kishanganj, Bihar</p>
+    </div>
+
+    <div class="info-box">
+      <i class="fas fa-envelope"></i>
+      <h4>Email</h4>
+      <p>rabina24@navurukul.org</p>
+    </div>
+  </div>
+
+  <div class="email-section">
+    <h3>SEND ME AN EMAIL</h3>
+    <p>I'M VERY RESPONSIVE TO MESSAGES</p>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <form action="https://formspree.io/f/mldlvqzd" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+             <div class="social-links">
+                    <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

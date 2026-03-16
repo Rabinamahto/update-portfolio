@@ -233,14 +233,24 @@ h2 {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.08);
   outline: none;
   font-size: 1rem;
   transition: border 0.3s ease, box-shadow 0.3s ease;
   background: var(--card-bg-light);
   color: var(--text-color-light);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(0,0,0,0.45);
+}
+
+:root.dark-mode .contact-form input::placeholder,
+:root.dark-mode .contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.6);
 }
 
 .contact-form input:focus,
@@ -253,15 +263,21 @@ h2 {
   resize: none;
 }
 
+/* dark-mode input border tweak */
+:root.dark-mode .contact-form input,
+:root.dark-mode .contact-form textarea {
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
 .contact-form button {
-  background:  var(--primary-color-light);
-  color: var(--bg-color-light);
-  border: none;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+    background:  var(--primary-color-light);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
@@ -428,8 +444,8 @@ h2 {
     padding: 12px 14px;
     border-radius: 8px;
     border: 1px solid rgba(0,0,0,0.08);
-    background: #fff;
-    color: #222;
+    background: var(--card-bg-light);
+    color: var(--text-color-light);
     font-size: 14px;
 }
 .contact-form textarea,
@@ -489,11 +505,25 @@ h2 {
     font-weight: 600;
 }
 
-@media (max-width: 900px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-    .contact-form .form-row {
-        flex-direction: column;
-    }
+/* ===== LIGHT MODE TEXT FIX ===== */
+:root:not(.dark-mode) body,
+:root:not(.dark-mode) h1,
+:root:not(.dark-mode) h2,
+:root:not(.dark-mode) h3,
+:root:not(.dark-mode) h4,
+:root:not(.dark-mode) h5,
+:root:not(.dark-mode) h6,
+:root:not(.dark-mode) p,
+:root:not(.dark-mode) .card,
+:root:not(.dark-mode) .timeline-content,
+:root:not(.dark-mode) .education-content,
+:root:not(.dark-mode) .about-text-simple,
+:root:not(.dark-mode) .about-stats-simple,
+:root:not(.dark-mode) .skills-cards,
+:root:not(.dark-mode) .project-card,
+:root:not(.dark-mode) .skill-item .skill-name,
+:root:not(.dark-mode) .skill-item .skill-icon,
+:root:not(.dark-mode) .project-card h3,
+:root:not(.dark-mode) .project-card p {
+    color: var(--text-color-light);
 }

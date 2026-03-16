@@ -288,10 +288,17 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-width: 110px;
+    text-align: center;
+}
+
+/* hide any accidentally-rendered empty tabs */
+.skill-tab:empty {
+    display: none !important;
 }
 
 .skill-tab.active {
-    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color-light));
+    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color));
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
@@ -307,6 +314,17 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 40px;
+}
+
+/* ensure skill card text/icon is visible in both themes */
+.skill-item .skill-name {
+    color: var(--text-color-light);
+    font-weight: 700;
+}
+
+.skill-item .skill-icon {
+    font-size: 1.6rem;
+    margin-right: 12px;
 }
 
 .skill-item {
@@ -327,7 +345,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color-light), var(--secondary-color-light));
+    background: linear-gradient(90deg, var(--primary-color-light), var(--secondary-color));
     opacity: 0.1;
     transition: width 0.4s ease;
 }
@@ -369,7 +387,7 @@
 .skill-percentage {
     font-weight: 800;
     font-size: 1.2rem;
-    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color-light));
+    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -402,7 +420,7 @@
 .skill-progress {
     height: 100%;
     border-radius: 20px;
-    background: linear-gradient(90deg, var(--primary-color-light), var(--secondary-color-light));
+    background: linear-gradient(90deg, var(--primary-color-light), var(--secondary-color));
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
     position: relative;
@@ -535,7 +553,7 @@
 
 .tech-badge {
     padding: 5px 10px;
-    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color-light));
+    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color));
     color: white;
     border-radius: 15px;
     font-size: 0.75rem;
@@ -581,7 +599,7 @@
 }
 
 .btn-live:hover {
-    background: var(--secondary-color-light);
+    background: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }
@@ -621,7 +639,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color-light), var(--secondary-color-light));
+    background: linear-gradient(90deg, var(--primary-color-light), var(--secondary-color));
 }
 
 .education-card:hover {
@@ -632,7 +650,7 @@
 .education-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color-light));
+    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -713,7 +731,7 @@
 }
 
 .coursework-tag:hover {
-    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color-light));
+    background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color));
     color: white;
     transform: translateY(-2px);
 }

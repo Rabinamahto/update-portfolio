@@ -82,15 +82,17 @@ export default function Skills() {
         </motion.div>
 
         <div className="skills-tabs">
-          {Object.keys(skillsData).map((category) => (
-            <button
-              key={category}
-              className={`skill-tab ${activeCategory === category ? 'active' : ''}`}
-              onClick={() => setActiveCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
+          {Object.keys(skillsData)
+            .filter((c) => c && c.toString().trim())
+            .map((category) => (
+              <button
+                key={category}
+                className={`skill-tab ${activeCategory === category ? 'active' : ''}`}
+                onClick={() => setActiveCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
         </div>
 
         <div className="skills-grid">
